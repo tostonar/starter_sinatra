@@ -1,0 +1,18 @@
+<h1><%= @artist.name %></h1>
+<div>
+Songs by <%= @artist.name %>
+  <ul>
+    <% @artist.songs.each do |song| %>
+    <li><a href="/songs/<%= song.id %>"><%= song.name %></a></li>
+    <% end %>
+  </ul>
+  <p><a href="/artists">All Artists</a></p>
+</div>
+
+<form action="/songs/new" method="GET">
+<input type="submit" value="Add a new song">
+</form>
+<form action="/" method="GET">
+<input type="submit" value="Back to main page">
+</form>
+

@@ -1,0 +1,19 @@
+<form action="/songs" method="post">
+
+<label for="artist_id">Enter artist name:</label>
+<select name="artist_id">
+<% Artist.all.each do |artist| %>
+  <option value="<%= artist.id %>"><%= artist.name %></option>
+  <% end %>
+</select>
+
+<label>Enter song name:</label>
+<input type="text" name="name">
+
+
+
+<label>Enter lyrics snippet:</label>
+<input type="text" name="lyrics">
+
+<input type="submit" value="Create song">
+</form>

@@ -1,0 +1,8 @@
+<h1>Artists</h1>
+<% @artists.each do |artist| %>
+  <p><a href="/artists/<%= artist.id %>"><%= artist.name %></a></p>
+<% end %>
+
+<form action="/" method="GET">
+<input type="submit" value="Back to main page">
+</form>

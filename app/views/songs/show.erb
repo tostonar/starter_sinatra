@@ -1,0 +1,21 @@
+<h1>Here are details for <%= @song.name %></h1>
+
+
+<h3><%= @song.name %> by <a href="/artists/<%= @song.artist_id %>"><%= @song.artist.name %></a></h3>
+<h4><%= @song.lyrics %> </h4>
+
+<form action="/songs/<%= @song.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete this song">
+  
+</form>
+
+<form action="/songs/<%= @song.id %>/edit" method="GET">
+<input type="submit" value="Edit this song">
+</form>
+
+
+
+<p><a href="/songs">Back to Songs</a></p>
+<p><a href="/artists">Back to Artists</a></p>
+
